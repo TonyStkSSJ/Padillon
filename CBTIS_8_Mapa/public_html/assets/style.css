@@ -8,7 +8,9 @@
     url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.svg#Sansation Bold")format("svg");
 }
+
 /* Cuerpo de la Pagina */
+
 *{
   margin: 0;
   padding: 0;
@@ -26,6 +28,7 @@ body{
     padding: 0;
     min-height: 100vh;
     background-size: cover;
+    overflow: hidden;
 }
 main{
   flex-grow: 1;
@@ -38,39 +41,42 @@ header {
     left: 0;
     right: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #ccc;
 }
 .logo{
-  font-size: 2rem;
+  align-items: center;
+  font-size: 3.5rem;
   text-decoration: none;
-  color:#F5F5DC;}
+  color:#F5F5DC;
+  padding: 15px;
+}
 .logo h1 {
     display: flex-start;
     margin: 0;
     font-size: 24px;
     color: #F5F5DC;
 }
+.logo-img{
+  height: 50px;
+  margin-right: 20px;
+}
 ul a{
-    margin-left: 1rem;
-    transition: 1s;
-    text-decoration: none;
-    color: #F5F5DC;
+  margin-left: 1rem;
+  transition: 1s;
+  text-decoration: none;
+  color: #F5F5DC;
 }
 ul a:hover {
-    font-size: 1.5rem;
-    color: #F5F5DC;
+  font-size: 1.5rem;
+  color: #F5F5DC;
 }
 ul li a {
-    text-decoration: none;
-    color: #F5F5DC;
-    font-size: 18px;
-}
-img{
-  display: flex-start;
-  width: 5%;
-  margin-right: 25px;
+  text-decoration: none;
+  color: #F5F5DC;
+  font-size: 18px;
 }
 h1{
   font-family: "Sansation Bold";
@@ -105,6 +111,24 @@ footer {
     align-items: center;
     border-bottom: 1px solid #ccc;
 }
+.map{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width:600px){
+  header{
+    flex-direction: row;
+    padding: 0px 30px;
+    justify-content: space-between;
+  }
+}
 /* Formulario */
 
 .formulario {
@@ -113,19 +137,24 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .card {
+  background-color: #722F37;
   width: 350px;
-  border: 1px solid #580000;
+  border: 1px solid #542329;
   border-radius: 4px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
+  place-items: center;
   margin: 10px;
 }
 
 .card-header {
-  background-color: #7b1113;
+  background-color: #542329;
   padding: 16px;
   text-align: center;
 }
@@ -141,6 +170,7 @@ footer {
 }
 
 .form-group {
+  margin: 25px;
   margin-bottom: 10px;
 }
 
@@ -160,15 +190,18 @@ footer {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin: 5px;
 }
 
 .btn1 {
-  padding: 12px 24px;
-  margin-left: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px;
+  padding: 15px 110px;
   font-size: 16px;
   border: none;
-  border-radius: 4px;
-  background-color: #7b1113;
+  border-radius: 8px;
+  background-color: #542329;
   color: #fff;
   text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
